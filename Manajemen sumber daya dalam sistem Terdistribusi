@@ -1,0 +1,78 @@
+Manajemen sumber daya dalam sistem terdistribusi 
+adalah proses pengelolaan sumber daya komputasi, penyimpanan, jaringan, dan lainnya dalam lingkungan yang terdiri dari banyak komputer atau node yang terhubung dalam jaringan. 
+Tujuan utama manajemen sumber daya dalam sistem terdistribusi 
+adalah untuk memastikan penggunaan sumber daya yang efisien, ketersediaan, keandalan, dan skalabilitas sistem.
+
+
+
+manajemen beban (load management) adalah aspek penting dalam manajemen sumber daya dalam sistem terdistribusi. 
+Ini melibatkan alokasi sumber daya secara dinamis untuk menangani lonjakan lalu lintas atau beban berlebihan.
+Berikut beberapa poin tambahan tentang manajemen beban dalam konteks sistem terdistribusi:
+1. Penjadwalan Dinamis: Manajemen beban memungkinkan sistem untuk secara otomatis menyesuaikan alokasi sumber daya berdasarkan kondisi saat ini. 
+Ini bisa termasuk penjadwalan tugas atau permintaan ke node yang memiliki kapasitas sumber daya yang cukup untuk menangani mereka.
+
+2. Penyeimbangan Beban: Salah satu tujuan utama manajemen beban adalah untuk memastikan bahwa sumber daya terdistribusi digunakan secara merata di seluruh sistem. 
+Ini menghindari situasi di mana satu atau beberapa node menjadi terlalu terbebani sementara yang lain tidak digunakan secara efisien.
+
+3. Algoritma Penyeimbangan Beban: Algoritma penyeimbangan beban berperan dalam memutuskan bagaimana tugas atau permintaan harus didistribusikan di antara node-node yang tersedia. 
+Beberapa algoritma populer termasuk Round Robin, Weighted Round Robin, Least Connections, dan Weighted Least Connections.
+
+4. Deteksi Lonjakan Lalu Lintas: Manajemen beban harus dilengkapi dengan kemampuan untuk mendeteksi lonjakan lalu lintas yang tidak biasa, 
+yang bisa disebabkan oleh beban kerja tiba-tiba atau serangan. Strategi dapat digunakan untuk mengatasi lonjakan tersebut, 
+seperti meningkatkan sumber daya atau mengalokasikan sumber daya tambahan secara otomatis.
+
+5. Keterbatasan Sumber Daya: Manajemen beban juga perlu mempertimbangkan keterbatasan sumber daya, seperti kapasitas CPU, memori, dan bandwidth jaringan pada setiap node. 
+Ini memungkinkan sistem untuk menghindari overloading node tertentu.
+
+6. Pemantauan Kinerja Real-time: Untuk efektif mengelola beban, sistem harus dapat memantau kinerja setiap node secara real-time. 
+Ini memungkinkan sistem untuk membuat keputusan yang tepat dalam hal alokasi sumber daya.
+
+7. Skalabilitas Otomatis: Manajemen beban yang baik juga dapat memfasilitasi skalabilitas otomatis, 
+di mana sistem secara otomatis menambahkan atau mengurangi sumber daya sesuai dengan perubahan permintaan atau beban kerja.
+
+8. Manajemen Sumber Daya yang Dinamis: Manajemen beban bekerja bersama dengan manajemen sumber daya lainnya 
+(seperti manajemen komputasi, jaringan, dan penyimpanan) untuk mencapai efisiensi total dalam lingkungan terdistribusi.
+Dengan manajemen beban yang efektif, sistem terdistribusi dapat menjaga kinerja yang baik, ketersediaan yang tinggi, 
+dan responsibilitas yang cepat terhadap perubahan dalam lingkungan dan permintaan pengguna.
+
+
+
+Manajemen failover 
+adalah strategi dan praktik yang digunakan dalam sistem terdistribusi dan sistem komputasi lainnya untuk menjaga ketersediaan dan keandalan 
+layanan dalam menghadapi kegagalan perangkat keras atau perangkat lunak. 
+komponen kunci dalam menjaga keandalan sistem terdistribusi dan mengurangi downtime yang mungkin terjadi akibat kegagalan perangkat keras atau perangkat lunak. 
+Hal ini penting terutama dalam aplikasi dan layanan yang memerlukan ketersediaan tinggi, seperti layanan perbankan online, e-commerce, dan sistem perusahaan yang kritis.
+
+Tujuannya adalah untuk memastikan bahwa jika satu komponen sistem gagal, 
+sistem dapat secara otomatis beralih ke komponen cadangan atau alternatif sehingga layanan tetap berjalan tanpa gangguan yang signifikan. 
+
+Berikut beberapa konsep terkait dengan manajemen failover:
+
+1. Komponen Cadangan: Dalam konteks manajemen failover, 
+komponen cadangan adalah salinan atau alternatif dari komponen utama yang dapat mengambil alih jika komponen utama gagal. 
+Ini bisa berupa server cadangan, node dalam cluster, atau penyimpanan cadangan.
+
+2. Deteksi Kegagalan: Manajemen failover memerlukan deteksi cepat terhadap kegagalan. 
+Sistem harus dapat mengidentifikasi ketika komponen utama tidak berfungsi dengan baik. 
+Ini dapat dicapai melalui pemantauan terus-menerus atau pengujian otomatis.
+
+3. Algoritma Pengambilan Keputusan: Sistem perlu memiliki algoritma pengambilan keputusan untuk menentukan kapan dan bagaimana beralih ke komponen cadangan. 
+Keputusan ini harus mempertimbangkan faktor-faktor seperti ketersediaan komponen cadangan, kinerja, dan beban kerja saat ini.
+
+4. Sinkronisasi Data: Dalam beberapa kasus, seperti manajemen failover untuk sistem basis data, 
+penting untuk memastikan bahwa data tetap konsisten antara komponen utama dan komponen cadangan. 
+Ini melibatkan replikasi data secara real-time atau berkala.
+
+5. Konfigurasi Hot Standby vs. Cold Standby: Ada dua pendekatan utama untuk manajemen failover. 
+Hot standby adalah ketika komponen cadangan aktif dan siap mengambil alih segera setelah kegagalan terdeteksi. 
+Cold standby adalah ketika komponen cadangan tidak aktif secara aktif dan harus diaktifkan secara manual setelah kegagalan.
+
+6. Uji dan Pemulihan: Sistem harus diuji secara berkala untuk memastikan bahwa manajemen failover berfungsi dengan benar. 
+Selain itu, prosedur pemulihan setelah kegagalan harus ditentukan dan dilatih untuk mengurangi waktu pemulihan.
+
+7. Ketersediaan Tinggi: Manajemen failover adalah salah satu komponen utama dalam mencapai tingkat ketersediaan tinggi dalam sistem terdistribusi.
+Dengan memiliki komponen cadangan yang siap mengambil alih, sistem dapat menghindari gangguan yang lama karena kegagalan.
+
+8. Skalabilitas: Manajemen failover juga harus berskala dengan pertumbuhan sistem. Semakin kompleks sistem, semakin penting manajemen failover yang efisien.
+
+
