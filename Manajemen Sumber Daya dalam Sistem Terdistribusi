@@ -1,0 +1,38 @@
+Sistem terdistribusi adalah kumpulan komputer otonom yang terhubung ke suatu jaringan, 
+dimana bagi pengguna sistem terlihat sebagai satu komputer. Salah satu tujuan dalam membangun 
+sistem terdistribusi adalah untuk berbagi sumber daya seperti hardware, software, dan data. 
+Manajemen sumber daya dalam sistem terdistribusi bertanggung jawab atas pengelolaan sumber daya 
+seperti pemrosesan, memori, penyimpanan, jaringan, dan perangkat keras lainnya. Sistem operasi 
+terdistribusi mengoptimalkan penggunaan sumber daya ini dan mengatur alokasi yang efisien di antara 
+node-node dalam jaringan. Pentingnya sistem operasi terdistribusi terletak pada kemampuannya untuk 
+mengoptimalkan penggunaan sumber daya, meningkatkan ketersediaan dan keandalan sistem, mengatasi 
+pertumbuhan skala, memproses data besar, memungkinkan kolaborasi dan koordinasi, menjaga keamanan data, 
+dan meningkatkan performa dengan penggunaan sumber daya yang optimal dari perangkat keras yang mendasarinya.
+
+Manajemen sumber daya dalam sistem terdistribusi dilakukan dengan cara mengoptimalkan penggunaan sumber daya 
+yang ada di dalam jaringan terdistribusi dan mengatur alokasi yang efisien di antara node-node dalam jaringan. 
+Berikut adalah beberapa cara manajemen sumber daya dilakukan dalam sistem terdistribusi:
+- Pengelolaan sumber daya terdistribusi melibatkan alokasi dan penggunaan sumber daya seperti pemrosesan, 
+memori, dan penyimpanan di antara node-node dalam jaringan terdistribusi. Sistem operasi terdistribusi memantau 
+dan mengelola penggunaan sumber daya ini untuk mengoptimalkan kinerja sistem secara keseluruhan.
+- Sistem operasi terdistribusi bertanggung jawab atas aktivitas-aktivitas yang terjadi pada sumber daya 
+seperti CPU time, memori, berkas-berkas, dan perangkat-perangkat I/O.
+- Sistem terdistribusi menyediakan akses pengguna ke bermacam sumber-daya sistem seperti increased data 
+availability, enhanced reliability, computation speed-up, dan increased data availability.
+- Sistem operasi terdistribusi juga harus dapat memanfaatkan seluruh sumber daya agar dapat 
+digunakan secara efektif dan efisien mungkin.
+- Pengelolaan sumber daya dapat dilakukan oleh sebuah program yang menyediakan antara muka komunikasi.
+Dengan melakukan manajemen sumber daya yang baik, sistem terdistribusi dapat meningkatkan ketersediaan 
+dan keandalan sistem, mengatasi pertumbuhan skala, memproses data besar, memungkinkan kolaborasi dan koordinasi, 
+menjaga keamanan data, dan meningkatkan performa dengan penggunaan sumber daya yang optimal dari perangkat keras yang mendasarinya.
+Apa yang dimaksud dengan manajemen sumber daya dalam sistem terdistribusi
+
+Manajemen sumber daya dalam sistem terdistribusi adalah pengelolaan sumber daya seperti pemrosesan, memori, penyimpanan, 
+jaringan, dan perangkat keras lainnya yang ada di dalam jaringan terdistribusi. Sistem operasi terdistribusi bertanggung 
+jawab atas manajemen sumber daya ini dan mengoptimalkan penggunaan sumber daya ini serta mengatur alokasi yang efisien 
+di antara node-node dalam jaringan. Pengelolaan sumber daya terdistribusi melibatkan alokasi dan penggunaan sumber daya 
+seperti pemrosesan, memori, dan penyimpanan di antara node-node dalam jaringan terdistribusi. Sistem operasi terdistribusi 
+memantau dan mengelola penggunaan sumber daya ini untuk mengoptimalkan kinerja sistem secara keseluruhan. Dengan melakukan 
+manajemen sumber daya yang baik, sistem terdistribusi dapat meningkatkan ketersediaan dan keandalan sistem, mengatasi 
+pertumbuhan skala, memproses data besar, memungkinkan kolaborasi dan koordinasi, menjaga keamanan data, dan meningkatkan 
+performa dengan penggunaan sumber daya yang optimal dari perangkat keras yang mendasarinya.
