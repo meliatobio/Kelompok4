@@ -1,0 +1,132 @@
+Contoh
+Manajemen sumber daya dalam sistem terdistribusi melibatkan berbagai aspek, dan kode program yang digunakan akan sangat bergantung pada tugas spesifik yang ingin Anda lakukan dalam manajemen sumber daya tersebut. Berikut adalah beberapa contoh kode program yang mencakup beberapa aspek manajemen sumber daya dalam sistem terdistribusi:
+
+1. **Manajemen Sumber Daya Jaringan - Monitoring Jaringan menggunakan Python dan library `psutil`**:
+
+   ```python
+   import psutil
+
+   # Fungsi untuk memeriksa penggunaan CPU
+   def check_cpu_usage():
+       return psutil.cpu_percent(interval=1)
+
+   # Fungsi untuk memeriksa penggunaan memori
+   def check_memory_usage():
+       return psutil.virtual_memory().percent
+
+   print(f"CPU Usage: {check_cpu_usage()}%")
+   print(f"Memory Usage: {check_memory_usage()}%")
+   ```
+
+2. **Manajemen Sumber Daya Perangkat Lunak - Pembaruan Aplikasi menggunakan Shell Script**:
+
+   ```bash
+   # Shell script untuk mengunduh dan memperbarui aplikasi
+   # Misalnya, untuk sistem Linux
+
+   # Unduh pembaruan paket
+   sudo apt-get update
+
+   # Perbarui semua paket yang tersedia
+   sudo apt-get upgrade -y
+   ```
+
+3. **Manajemen Sumber Daya Data - Penyimpanan dan Pengambilan Data menggunakan Python dan MongoDB**:
+
+   ```python
+   from pymongo import MongoClient
+
+   # Menghubungkan ke database MongoDB
+   client = MongoClient('localhost', 27017)
+   db = client['mydb']
+
+   # Menyimpan data
+   data = {'nama': 'John', 'usia': 30}
+   db.my_collection.insert_one(data)
+
+   # Mengambil data
+   retrieved_data = db.my_collection.find_one({'nama': 'John'})
+   print(retrieved_data)
+   ```
+
+4. **Manajemen Keamanan - Implementasi Autentikasi pada Layanan Web menggunakan Flask (Python)**:
+
+   ```python
+   from flask import Flask, request
+   from flask_bcrypt import Bcrypt
+
+   app = Flask(__name__)
+   bcrypt = Bcrypt(app)
+
+   # Daftar pengguna dengan kata sandi yang di-hash
+   users = {
+       'user1': bcrypt.generate_password_hash('password1').decode('utf-8'),
+       'user2': bcrypt.generate_password_hash('password2').decode('utf-8')
+   }
+
+   @app.route('/login', methods=['POST'])
+   def login():
+       username = request.json['username']
+       password = request.json['password']
+
+       if username in users and bcrypt.check_password_hash(users[username], password):
+           return 'Login berhasil'
+       else:
+           return 'Login gagal'
+
+   if __name__ == '__main__':
+       app.run()
+   ```
+
+5. **Manajemen Kapasitas - Penggunaan Kubernetes untuk Skalabilitas Otomatis**:
+
+   Dalam hal ini, Anda akan menggunakan konfigurasi Kubernetes (YAML) untuk mengelola penambahan dan pengurangan instance aplikasi sesuai dengan permintaan.
+
+   Contoh konfigurasi `Deployment` Kubernetes:
+
+   ```yaml
+   apiVersion: apps/v1
+   kind: Deployment
+   metadata:
+     name: my-app
+   spec:
+     replicas: 3  # Jumlah replika yang diinginkan
+     template:
+       metadata:
+         labels:
+           app: my-app
+       spec:
+         containers:
+         - name: my-app-container
+           image: my-app-image:latest
+   ```
+
+
+Dalam contoh-contoh kode program diatas, terdapat berbagai alat atau tools yang digunakan tergantung pada bahasa pemrograman dan tugas spesifiknya. Berikut adalah daftar tools dan teknologi yang digunakan dalam setiap contoh:
+
+1. **Manajemen Sumber Daya Jaringan - Monitoring Jaringan menggunakan Python dan library `psutil`**:
+
+   - Bahasa Pemrograman: Python
+   - Library: `psutil` digunakan untuk memantau sumber daya jaringan.
+
+2. **Manajemen Sumber Daya Perangkat Lunak - Pembaruan Aplikasi menggunakan Shell Script**:
+
+   - Shell Script: Digunakan untuk menjalankan perintah di terminal.
+   - Package Manager: `apt-get` (pada sistem Linux berbasis Debian/Ubuntu) digunakan untuk mengelola paket perangkat lunak.
+
+3. **Manajemen Sumber Daya Data - Penyimpanan dan Pengambilan Data menggunakan Python dan MongoDB**:
+
+   - Bahasa Pemrograman: Python
+   - Database: MongoDB digunakan untuk menyimpan dan mengambil data.
+   - Library: `pymongo` digunakan untuk berinteraksi dengan MongoDB dari Python.
+
+4. **Manajemen Keamanan - Implementasi Autentikasi pada Layanan Web menggunakan Flask (Python)**:
+
+   - Bahasa Pemrograman: Python
+   - Framework Web: Flask digunakan untuk membuat layanan web.
+   - Library: `Flask-Bcrypt` digunakan untuk mengelola otentikasi yang aman.
+
+5. **Manajemen Kapasitas - Penggunaan Kubernetes untuk Skalabilitas Otomatis**:
+
+   - Orkestrasi Container: Kubernetes digunakan untuk mengelola container dan skalabilitas otomatis.
+   - Konfigurasi Kubernetes: File YAML digunakan untuk mendefinisikan konfigurasi aplikasi, seperti `Deployment` yang menentukan jumlah replika.
